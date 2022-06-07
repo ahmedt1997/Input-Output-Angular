@@ -6,22 +6,15 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  @Input()
-  channelName: string = "lorem";
 
-  @Output()
-  sendMessageEmitter = new EventEmitter<any>();
-
-
-
+  @Input() valueToParent = ""
+  @Output() sendToParent= new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  sendMessageToParent(e:any) {
-    this.sendMessageEmitter.emit(e.target.value)
+  send($event: any) {
+    this.sendToParent.emit($event.target.value)
   }
-
-
 }

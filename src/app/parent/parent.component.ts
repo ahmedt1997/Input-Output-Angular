@@ -6,19 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  variableInParent: string ="";
 
-  msgFromChild :string = "";
+  msg:string = ""
 
+  valueToInput: string ="";
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  receiveMessage($event: any) {
-    this.msgFromChild=$event
+  catchFromchild($event: any) {
+    this.msg=$event
   }
-
 }

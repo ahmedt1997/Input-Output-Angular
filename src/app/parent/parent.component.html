@@ -1,9 +1,5 @@
+<h3>Parent component {{msg}}</h3>
+<input type="text" [(ngModel)]="valueToInput">
+<app-child [valueToParent]="valueToInput" (sendToParent)="catchFromchild($event)"></app-child>
 
-<div>
-  <h1>parent component</h1>
-  <input type="text" name="" id="" [(ngModel)]="variableInParent" >
-  <p>{{msgFromChild}}</p>
-</div>
-
-<app-child [channelName]="variableInParent" (sendMessageEmitter)="receiveMessage($event)"></app-child>
 
